@@ -1,0 +1,117 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+  background:linear-gradient(to left ,#161fa8 , #99e2d0);
+}
+
+.grid{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+a{
+    float: right;
+    font-size: 30px;
+    color: white;
+}
+a:hover{
+  text-decoration: underline;
+}
+.box_header{
+    width: 25%;
+    font-size: 1px;
+    box-sizing: border-box;
+    margin: 15px;
+    color: white;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    display: block;
+   
+}
+.inner_header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+   
+}
+.input{
+    text-align: center;
+    margin: 100px auto;
+  }
+
+  input[type="submit"]{
+    padding: 15px 30px;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 1px;
+    font-family: "Nunito",sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  
+  .input input[type="text"]{
+    width: 600px;
+    height: 55px;
+    padding: 5px 10px;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 1px;
+    font-family: "Nunito",sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  
+  .card{
+    width: 50%;
+    background: #e7e7e7;
+    height: 40vh;
+    margin: 50px auto;
+    border-radius: 2px;
+  }
+  
+  
+  .close{
+    float: right;
+    margin-top: -2px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .card h1{
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .card p{
+    text-align: center;
+    margin:40px 0;
+    font-size:20px;
+  }
+  .in{
+      height: 30px;
+      width: 300px;
+      margin: 10px;
+  }
+
+  .grid{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.submit_currency:hover{
+  font-size: 30px;
+}
+.submit:hover{
+  font-size: 25px;
+}
+select:hover{
+  font-size: 15px;
+}
