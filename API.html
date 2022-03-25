@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/diffrerent_apistyle.css">
+    <title>Different API</title>
+</head>
+
+<body onload="display_drop_down_type()" id="google_element">
+    <div class="header">
+        <div class="inner_header">
+            <div class="grid">
+                <div class="box_header"><a href="Home.html">Home</a></div>
+                <div class="box_header"><a href="map_layers.html">Different layers</a></div>
+                <div class="box_header"><a href="API.html" style="text-decoration: underline;">Different API</a></div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div>
+
+            <h1 style="text-align: center; margin-top: 20px; color: white;">Weather</h1>
+            <div class="input">
+                <input type="text" placeholder="Enter the city" class="input_text">
+                <input type="submit" value="Submit" class="submit">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <h1 class="name" id="name"></h1>
+                <p class="temp"></p>
+                <p class="clouds"></p>
+                <p class="desc"></p>
+            </div>
+        </div>
+
+        <h1 style="text-align: center; margin-top: 20px; margin-bottom: 10pc; color: white;">Money Exchange</h1>
+        <div style="background-color: rgba(124, 124, 124, 0.356);" class="grid">
+            <div style="width: 50%; text-align: center;">
+                <input type="number" placeholder="Currency number" class="ipute_currency_number in">
+                <br>
+                <select name="h" class="ipute_currency_type" style="width: 300px; height: 40px; margin: 10px;" id="select" ></select>
+                <p>to</p>
+                <select name="h" class="ipute_currency_convert_to_type" style="width: 300px; height: 40px; margin: 10px;" id="select2" ></select><br>
+                <input type="submit" value="Convert" class="submit_currency" style="margin-bottom: 20px;">
+            </div>
+            <h1 id="exchange" style="width: 50%; margin-top: 5%; color: white;"></h1>
+           
+        </div>
+        <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+            function loadGoogleTranslate(){
+                new google.translate.TranslateElement("google_element");
+            }
+        </script>
+        <script src="app.js"></script>
+</body>
+
+</html>

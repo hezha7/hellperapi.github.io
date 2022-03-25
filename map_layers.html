@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/diffrent_layers_style.css">
+    <script type='text/javascript'
+        src='https://www.bing.com/api/maps/mapcontrol?key=Ar_981f6MTJkfFACqP1hyALEyukmZ5Hseqx_2EtR4QAgmufrItj7jCstY3m2lbbp'></script>
+    <title>Different layers</title>
+    <script src="javascript.js"></script>
+</head>
+
+<body onload='loadMapScenario();'>
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="grid">
+                <div class="box_header"><a href="Home.html">Home</a></div>
+                <div class="box_header"><a href="map_layers.html" style="text-decoration: underline;">Different
+                        layers</a></div>
+                <div class="box_header"><a href="API.html">Different API</a></div>
+                <div class="box_header">
+                    <ul>
+                        <li>
+                            <select class="map_icon" onchange="seticon()">
+                                <option value="null">default</option>
+                                <option value="pin.png">pin</option>
+                                <option value="pin2.png">pin2</option>
+                                <option value="flag.png">flag</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <hr>
+        <br>
+        <div id='printoutPanel' style="color: white; margin-top: 40px;"></div>
+        <div id='myMap' style='width: 100vw; height: 700px;'></div>
+        </header>
+</body>
+
+</html>

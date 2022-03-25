@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/football_.css">
+    
+    <title>Football Teams</title>
+</head>
+
+<body>
+    <script >
+        var id=localStorage.getItem("id");
+        var teams=localStorage.getItem("teams");
+        console.log(teams);
+        fetch('https://app.sportdataapi.com/api/v1/soccer/teams?apikey=db8497a0-a785-11ec-a73d-87179df12496&country_id='+id)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data['data']);
+                var div=document.getElementById("container");
+                for (var i = 0; i < data['data'].length; i++) {
+                    const newbtn2 = document.createElement('p');
+                    const text2 = document.createTextNode(data["data"][i]['name']);
+                    div.appendChild(newbtn2);
+                    newbtn2.classList.add("box1");
+                    newbtn2.appendChild(text2);
+
+                    const newlogo = document.createElement('img');
+                    newlogo.setAttribute('src',data["data"][i]['logo']);
+                    newlogo.setAttribute('width','100px');
+                    newlogo.setAttribute('height','100px');
+                    newlogo.classList.add("box2");
+                    newbtn2.appendChild(newlogo);
+                    
+                    
+                }
+                document.getElementById('h').innerHTML=teams;
+
+            })
+            .catch(err => alert("Wrong type!"));
+            
+
+    </script>
+    <h1 style="color: white;" id="h"></h1>
+    <div class="grid" id="container">
+    </div>
+</body>
+
+</html>

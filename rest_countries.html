@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest countries</title>
+</head>
+
+<body style="background:linear-gradient(to left ,#161fa8 , #99e2d0);">
+    <script>
+        var name=localStorage.getItem("name");
+        var money=localStorage.getItem("money");
+        fetch('https://restcountries.com/v3.1/name/'+name)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data[0]);
+                document.getElementById('name').innerHTML = data[0]['name']['common'];
+                document.getElementById('flag').setAttribute('src',data[0]['flags']['png']);
+                document.getElementById('borders').innerHTML="Borders of "+data[0]['name']['common']+" are { "+data[0]["borders"]+" }";
+                document.getElementById('capital').innerHTML = "Capital of "+data[0]['name']['common']+" is "+data[0]['capital'];
+                document.getElementById('currency').innerHTML = "The money symbole of "+data[0]['name']['common']+" "+data[0]['currencies'][money].name;
+                document.getElementById('population').innerHTML = "The number of Population  in "+data[0]['name']['common']+" is "+data[0]['population'];
+
+            })
+            .catch(err => alert("Wrong type!"));
+
+    </script>
+    <h1 id="name" style="text-align: center; color: white;"></h1>
+    <div style="text-align: center;">
+        <img width="400px" height="200px" id="flag">
+    </div>
+    <h1 id="borders" style="color: white;"></h1>
+    <h1 id="capital" style="color: white;"></h1>
+    <h1 id="currency" style="color: white;"></h1>
+    <h1 id="population" style="color: white;"></h1>
+</body>
+
+</html>
